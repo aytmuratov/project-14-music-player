@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-app">
+        <div class="player-card">
+            <div class="album-art" id="albumArt">🎵</div>
+            <div class="song-info">
+                <div class="song-title" id="songTitle">No Song Selected</div>
+                <div class="song-artist" id="songArtist">--</div>
+            </div>
+            <div class="progress-bar"><div class="progress" id="progress"></div></div>
+            <div class="time-info"><span id="currentTime">0:00</span><span id="duration">0:00</span></div>
+            <div class="controls">
+                <button onclick="prevTrack()">⏮</button>
+                <button class="play-btn" id="playBtn" onclick="togglePlay()">▶</button>
+                <button onclick="nextTrack()">⏭</button>
+            </div>
+            <div class="volume">
+                <span>🔈</span>
+                <input type="range" id="volumeSlider" min="0" max="100" value="75" oninput="setVolume(this.value)">
+            </div>
+            <div class="extra-controls">
+                <button id="shuffleBtn" onclick="toggleShuffle()">🔀</button>
+                <button id="repeatBtn" onclick="toggleRepeat()">🔁</button>
+            </div>
+        </div>
+        <div class="playlist">
+            <h3>Playlist</h3>
+            <div id="playlistContainer"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

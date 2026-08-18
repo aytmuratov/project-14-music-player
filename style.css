@@ -1,0 +1,32 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0c0c1d,#1a1a3e,#2d1b69)}
+.player-app{display:flex;gap:2rem;align-items:flex-start}
+.player-card{width:350px;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border-radius:20px;padding:2rem;text-align:center;color:#fff}
+.album-art{width:200px;height:200px;border-radius:50%;margin:0 auto 1.5rem;background:linear-gradient(135deg,#6c5ce7,#a29bfe);display:flex;align-items:center;justify-content:center;font-size:4rem;animation:none;transition:.5s}
+.album-art.playing{animation:spin 4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.song-info{margin-bottom:1.5rem}
+.song-title{font-size:1.3rem;font-weight:700;margin-bottom:.3rem}
+.song-artist{font-size:.9rem;opacity:.7}
+.progress-bar{width:100%;height:4px;background:rgba(255,255,255,.2);border-radius:2px;margin-bottom:.5rem;cursor:pointer}
+.progress{height:100%;background:#6c5ce7;border-radius:2px;width:0%;transition:.1s}
+.time-info{display:flex;justify-content:space-between;font-size:.75rem;opacity:.6;margin-bottom:1.5rem}
+.controls{display:flex;justify-content:center;align-items:center;gap:1.5rem;margin-bottom:1.5rem}
+.controls button{background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;transition:.2s}
+.controls button:hover{transform:scale(1.2)}
+.play-btn{width:50px;height:50px;border-radius:50%;background:#6c5ce7!important;font-size:1.2rem!important;display:flex;align-items:center;justify-content:center}
+.volume{display:flex;align-items:center;gap:.5rem;margin-bottom:1rem}
+.volume input{flex:1;accent-color:#6c5ce7}
+.extra-controls{display:flex;gap:1rem;justify-content:center}
+.extra-controls button{background:rgba(255,255,255,.1);border:none;color:#fff;padding:.5rem 1rem;border-radius:20px;cursor:pointer;font-size:.9rem}
+.extra-controls button.active{background:#6c5ce7}
+.playlist{width:300px;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border-radius:20px;padding:1.5rem;color:#fff;max-height:500px;overflow-y:auto}
+.playlist h3{margin-bottom:1rem;font-size:1.1rem}
+.playlist-item{display:flex;align-items:center;gap:.8rem;padding:.7rem;border-radius:8px;cursor:pointer;transition:.2s;margin-bottom:.3rem}
+.playlist-item:hover{background:rgba(255,255,255,.1)}
+.playlist-item.active{background:rgba(108,92,231,.3)}
+.playlist-item .num{font-size:.8rem;opacity:.5;min-width:20px}
+.playlist-item .info{flex:1}
+.playlist-item .info h4{font-size:.85rem;margin-bottom:.1rem}
+.playlist-item .info span{font-size:.75rem;opacity:.6}
+@media(max-width:768px){.player-app{flex-direction:column;align-items:center}}
