@@ -7,34 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="player-app">
-        <div class="player-card">
-            <div class="album-art" id="albumArt">🎵</div>
+    <div class="player-container">
+        <div class="now-playing-section">
+            <div class="album-art" id="albumArt">
+                <span class="album-emoji" id="albumEmoji">🎵</span>
+                <div class="visualizer" id="visualizer"></div>
+            </div>
             <div class="song-info">
-                <div class="song-title" id="songTitle">No Song Selected</div>
-                <div class="song-artist" id="songArtist">--</div>
-            </div>
-            <div class="progress-bar"><div class="progress" id="progress"></div></div>
-            <div class="time-info"><span id="currentTime">0:00</span><span id="duration">0:00</span></div>
-            <div class="controls">
-                <button onclick="prevTrack()">⏮</button>
-                <button class="play-btn" id="playBtn" onclick="togglePlay()">▶</button>
-                <button onclick="nextTrack()">⏭</button>
-            </div>
-            <div class="volume">
-                <span>🔈</span>
-                <input type="range" id="volumeSlider" min="0" max="100" value="75" oninput="setVolume(this.value)">
-            </div>
-            <div class="extra-controls">
-                <button id="shuffleBtn" onclick="toggleShuffle()">🔀</button>
-                <button id="repeatBtn" onclick="toggleRepeat()">🔁</button>
+                <h2 class="song-title" id="songTitle">Select a song</h2>
+                <p class="song-artist" id="songArtist">—</p>
             </div>
         </div>
-        <div class="playlist">
-            <h3>Playlist</h3>
-            <div id="playlistContainer"></div>
+
+        <div class="progress-section">
+            <span class="time" id="currentTime">0:00</span>
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+                <div class="progress-thumb" id="progressThumb"></div>
+            </div>
+            <span class="time" id="totalTime">0:00</span>
+        </div>
+
+        <div class="controls">
+            <button class="ctrl-btn" id="shuffleBtn" title="Shuffle">🔀</button>
+            <button class="ctrl-btn" id="prevBtn" title="Previous">⏮</button>
+            <button class="ctrl-btn play-btn" id="playBtn" title="Play">▶</button>
+            <button class="ctrl-btn" id="nextBtn" title="Next">⏭</button>
+            <button class="ctrl-btn" id="repeatBtn" title="Repeat">🔁</button>
+        </div>
+
+        <div class="volume-section">
+            <span class="vol-icon">🔊</span>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="75">
+        </div>
+
+        <div class="playlist-section">
+            <div class="playlist-header">
+                <h3>🎶 Playlist</h3>
+                <span class="track-count" id="trackCount">0 tracks</span>
+            </div>
+            <div class="playlist" id="playlist"></div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

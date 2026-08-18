@@ -1,17 +1,15 @@
 # Music Player
 
-A beautiful music player with playlist, shuffle, and progress visualization.
+Modern music player interface with simulated audio.
 
 ## Features
-- Album art animation
-- Playlist management
-- Shuffle and repeat modes
+
+- Playlist with 12 songs
+- Play/pause/next/previous controls
+- Progress bar with seek
 - Volume control
-- Progress bar
+- Shuffle and repeat modes
+- Now playing animation with visualizer
+- Album art with gradients and emoji
+- Web Audio API tone generation for demo
 - Responsive design
-
-## Run
-Open `index.html` in browser.
-
-## Tech
-HTML5, CSS3, JavaScript
